@@ -44,7 +44,7 @@ export default class Game {
         if (targetCell && targetCell.querySelector(".goblin")) {
           this.wasHit = true;
           this.hitCounter.inc();
-          targetCell.removeChild(this.goblin.element);
+          this.goblin.element.remove();
         }
       },
       false,
