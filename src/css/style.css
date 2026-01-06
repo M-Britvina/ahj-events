@@ -1,0 +1,55 @@
+body {
+    color: #999;
+}
+
+.game-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+}
+
+.goblin {
+    width: 95%;
+}
+
+.field {
+    display: grid;
+    width: 600px;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.cell {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    display: flex;
+}
+
+.game-container:hover {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='128px' width='128px' style='fill:black;font-size:32px;'><text y='50%'>🔨</text></svg>"), auto;
+}
+
+.counter {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    color: green;
+    margin: 20px;
+}
+
+.counter-title {
+    text-align: right;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+.counter-value {
+    text-align: left;
+    font-size: 24px;
+    padding-left: 10px;
+}
