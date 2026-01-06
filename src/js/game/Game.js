@@ -17,8 +17,8 @@ export default class Game {
   render() {
     const gameContainer = document.querySelector(".game-container");
 
-    gameContainer.appendChild(this.hitCounter.element);
-    gameContainer.appendChild(this.healthCounter.element);
+    gameContainer.append(this.hitCounter.element);
+    gameContainer.append(this.healthCounter.element);
 
     this.container = document.createElement("div");
     this.container.classList.add("field");
@@ -29,10 +29,10 @@ export default class Game {
       const cell = document.createElement("div");
       cell.classList.add("cell");
       cell.id = "cell-" + i;
-      this.container.appendChild(cell);
+      this.container.append(cell);
     }
 
-    gameContainer.appendChild(this.container);
+    gameContainer.append(this.container);
 
     gameContainer.addEventListener(
       "click",
@@ -55,7 +55,7 @@ export default class Game {
     let goblinPosition = this.goblin.move();
     document
       .getElementById(`cell-${goblinPosition}`)
-      .appendChild(this.goblin.element);
+      .append(this.goblin.element);
 
     this.timer = setInterval(() => {
       if (!this.wasHit) {
@@ -69,7 +69,7 @@ export default class Game {
         let goblinPosition = this.goblin.move();
         document
           .getElementById(`cell-${goblinPosition}`)
-          .appendChild(this.goblin.element);
+          .append(this.goblin.element);
       }
     }, 1000);
   }
