@@ -77,6 +77,13 @@ export default class Game {
   stop() {
     this.gameOver = true;
     clearInterval(this.timer);
-    alert(`Вы проиграли! Счёт ${this.hitCounter.value}`);
+    this.showMessage(`Вы проиграли! Счёт ${this.hitCounter.value}`);
+  }
+
+  showMessage(message) {
+    let messageElement = document.createElement("h1");
+    messageElement.classList.add("overlay-text");
+    messageElement.textContent = message;
+    this.container.append(messageElement);
   }
 }
